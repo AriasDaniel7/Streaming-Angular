@@ -1,0 +1,37 @@
+<div
+  class="pt-20 md:pt-0 min-h-screen w-full flex flex-col justify-center items-center z-0"
+>
+  <h1
+    class="text-white text-center text-5xl md:text-6xl font-bold animate__animated animate__fadeInDown"
+  >
+    Bienvenido! 😉
+  </h1>
+  <h2
+    class="text-white md:text-3xl text-center animate__animated animate__fadeInUp mt-4"
+  >
+    Compra tu pantalla favorita en <span class="font-bold">ScreenStore</span>
+  </h2>
+  <div class="contenido rounded-2xl">
+    <swiper-container class="rounded-2xl" init="false">
+      @for (image of images; track $index) {
+      <swiper-slide class="my-4 rounded-2xl">
+        <div style="position: relative" class="w-full h-48 rounded-2xl">
+          <img
+            style="object-fit: contain"
+            [ngSrc]="image"
+            [alt]="image.split('/')[0]"
+            fill
+            priority
+          />
+        </div>
+      </swiper-slide>
+      }
+    </swiper-container>
+  </div>
+  <div class="flex justify-center items-cente">
+    <button [routerLink]="['./pantallas']" mat-fab extended title="Comenzar">
+      Comenzar
+      <mat-icon>start</mat-icon>
+    </button>
+  </div>
+</div>

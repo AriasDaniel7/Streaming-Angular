@@ -1,0 +1,42 @@
+<mat-toolbar
+  class="nav shadow-inner flex justify-between items-center w-full h-full fixed z-10"
+>
+  <a href="./">
+    <div class="flex justify-center items-center gap-3">
+      <div style="position: relative" class="w-16 h-10">
+        <img
+          style="object-fit: contain"
+          ngSrc="./logo.webp"
+          alt="ScreenStore Logo"
+          fill
+          priority
+        />
+      </div>
+      <span class="text-white font-bold">ScreenStore</span>
+    </div>
+  </a>
+  <div>
+    <div class="hidden md:flex justify-between items-center gap-2">
+      <button [routerLink]="['./pantallas']"  mat-fab extended title="Pantallas">Pantallas</button>
+      <button mat-fab extended title="Compras">Compras</button>
+      <button mat-fab extended title="Contacto">Contacto</button>
+      <button mat-fab title="Carrito">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+      <button mat-fab extended title="Login">
+        <mat-icon>login</mat-icon>
+        Login
+      </button>
+    </div>
+    <div class="md:hidden">
+      <button
+        title="menu"
+        mat-fab
+        class="w-full h-full"
+        (click)="drawer.toggle()"
+      >
+        <mat-icon class="text-white scale-[1.5]">menu</mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-toolbar>

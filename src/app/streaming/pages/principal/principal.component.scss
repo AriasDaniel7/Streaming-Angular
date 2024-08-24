@@ -1,0 +1,37 @@
+@import "./../../../shared/common/sass/variables";
+
+span {
+  color: $amber;
+}
+
+.contenido {
+  max-width: 120rem;
+  margin: 2rem auto;
+  width: 90%;
+  background-color: $rich-black-3;
+  -webkit-box-shadow: 0px 0px 28px -2px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 0px 0px 28px -2px rgba(0, 0, 0, 0.37);
+  box-shadow: 0px 0px 28px -2px rgba(0, 0, 0, 0.37);
+}
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: $rich-black-3;
+  padding: 2rem;
+}
+
+swiper-slide img {
+  width: 100%; /* Ocupar el 100% del ancho del contenedor */
+  height: 100%; /* Mantener la proporción de la imagen */
+  object-fit: contain; /* Ajustar el tamaño de la imagen dentro del contenedor */
+}
+
+button[mat-fab] {
+  @apply text-black text-base mb-10;
+}

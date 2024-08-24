@@ -1,0 +1,20 @@
+@import "./../../../shared/common/sass/variables";
+
+.nav {
+  background-color: $rich-black-3;
+  -webkit-box-shadow: 0px 0px 20px -2px $rich-black-3;
+  -moz-box-shadow: 0px 0px 20px -2px $rich-black-3;
+  box-shadow: 0px 0px 20px -2px $rich-black-3;
+}
+
+button[mat-fab] {
+  &:hover {
+    background-color: lighten($rich-black, 40%);
+  }
+
+  & {
+    background-color: lighten($rich-black, 20%);
+    color: white;
+    height: 40px;
+  }
+}

@@ -1,0 +1,54 @@
+<div class="m-4">
+  <div class="flex justify-between items-center">
+    <span class="text-white text-2xl font-bold">Menu</span>
+    <button
+      title="Cerrar"
+      mat-fab
+      class="w-full h-full"
+      (click)="drawer.toggle()"
+    >
+      <mat-icon class="text-white scale-[1.5]">close</mat-icon>
+    </button>
+  </div>
+  <mat-list role="list">
+    <mat-list-item role="listitem">
+      <a class="text-white">
+        <div class="flex">
+          <span>Carrito</span>
+          <mat-icon>shopping_cart</mat-icon>
+        </div>
+      </a>
+    </mat-list-item>
+
+    <mat-list-item role="listitem">
+      <a
+        [routerLink]="['./pantallas']"
+        (click)="drawer.toggle()"
+        class="text-white"
+      >
+        <div class="flex">
+          <span>Pantallas</span>
+          <mat-icon>tv</mat-icon>
+        </div>
+      </a>
+    </mat-list-item>
+
+    <mat-list-item role="listitem">
+      <a class="text-white">
+        <div class="flex">
+          <span>Compras</span>
+          <mat-icon>paid</mat-icon>
+        </div>
+      </a>
+    </mat-list-item>
+
+    <mat-list-item role="listitem">
+      <a class="text-white">
+        <div class="flex">
+          <span>Contacto</span>
+          <mat-icon>perm_phone_msg</mat-icon>
+        </div>
+      </a>
+    </mat-list-item>
+  </mat-list>
+</div>

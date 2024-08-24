@@ -1,0 +1,37 @@
+@import "./../../../shared/common/sass/variables";
+
+button[mat-fab] {
+  &:hover {
+    background-color: lighten($rich-black, 40%);
+  }
+
+  & {
+    background-color: lighten($rich-black, 20%);
+    color: white;
+    height: 40px;
+  }
+}
+
+mat-list {
+  margin-top: 0.5rem;
+  mat-list-item {
+    &:hover {
+      background-color: lighten($rich-black, 40%);
+      cursor: pointer;
+    }
+
+    & {
+      background-color: lighten($rich-black, 20%);
+      color: white;
+      @apply rounded;
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      width: 100%;
+      div {
+        @apply flex items-center justify-between;
+      }
+    }
+  }
+}
