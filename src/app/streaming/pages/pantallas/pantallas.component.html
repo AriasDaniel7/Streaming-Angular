@@ -2,7 +2,12 @@
   <h1 class="text-white text-center text-5xl md:text-6xl font-bold">
     Pantallas
   </h1>
-  <h2 class="text-white md:text-3xl text-center mt-4">
-    Estamos trabajando en ello! 😅
-  </h2>
+
+  <div class="contenido h-full w-full">
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-8">
+      @for (screen of screens; track $index) {
+      <app-card [screen]="screen"></app-card>
+      }
+    </section>
+  </div>
 </div>

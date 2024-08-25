@@ -1,0 +1,39 @@
+<div class="card">
+  <p class="title text-white text-3xl font-semibold">{{ screen.name }}</p>
+  <div style="position: relative" class="w-full h-48 rounded-2xl">
+    <img
+      style="object-fit: contain; padding: 1rem"
+      [ngSrc]="screen.image"
+      [alt]="screen.image.split('/')[1].split('.')[0]"
+      fill
+      priority
+    />
+  </div>
+  <div class="flex justify-center items-center gap-4 text-white">
+    @if (screen.price !== screen.pricePrevious) {
+
+    <p class="price1 line-through">
+      {{ screen.pricePrevious | currency : "COP" : "$" : "1.0-0" }} COP/mes
+    </p>
+    <p class="price2 text-3xl font-medium">
+      {{ screen.price | currency : "COP" : "$" : "1.0-0" }} <span>COP/mes</span>
+    </p>
+    }@else {
+    <p class="price2 text-3xl font-medium">
+      {{ screen.price | currency : "COP" : "$" : "1.0-0" }} <span>COP/mes</span>
+    </p>
+    }
+  </div>
+  <p class="description">{{ screen.description }}</p>
+  <div class="text-white flex justify-center items-center">
+    <p class="offer">
+      Disponible: <span>{{ screen.stock }}</span>
+    </p>
+    <button class="m-4 w-full" mat-fab extended>Comprar</button>
+  </div>
+  <div class="ribbon-wrap">
+    @if (screen.discount !== 0) {
+    <div class="ribbon font-bold">{{ screen.discount }}% OFF</div>
+    }
+  </div>
+</div>

@@ -1,0 +1,73 @@
+@import "./../../../shared/common/sass/variables";
+
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: $rich-black-3;
+  text-align: center;
+  border: 1px solid $rich-black-3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px $rich-black-3;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-7px);
+    transition-duration: 0.4s;
+  }
+}
+
+button[mat-fab] {
+  &:hover {
+    background-color: lighten($rich-black, 40%);
+  }
+
+  & {
+    background-color: lighten($rich-black, 20%);
+    color: white;
+    height: 40px;
+  }
+}
+
+.card span {
+  font-size: 1.2rem;
+}
+
+.card .price2 {
+  color: $amber;
+}
+
+.card .description {
+  @apply text-white text-start;
+  font-size: 1.1rem;
+  margin: 10px 0 10px;
+}
+
+.subscribe-button:hover {
+  opacity: 0.85;
+}
+
+.ribbon-wrap {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -20px;
+  left: 50px;
+  pointer-events: none;
+}
+
+.ribbon {
+  width: 200px;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 4px 0;
+  border: 1px solid #000;
+  background: $amber;
+  color: $rich-black-3;
+  position: absolute;
+  transform: rotate(-45deg);
+  right: -10px;
+  top: 55%;
+}

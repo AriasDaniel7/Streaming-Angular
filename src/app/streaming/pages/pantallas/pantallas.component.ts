@@ -1,12 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CardComponent } from '../../components/card/card.component';
+import { Screen } from '../../interfaces/screen.interface';
+import { ScreenService } from '../../services/screen.service';
 
 @Component({
   selector: 'app-pantallas',
   standalone: true,
-  imports: [],
+  imports: [CardComponent],
   templateUrl: './pantallas.component.html',
-  styleUrl: './pantallas.component.scss'
+  styleUrl: './pantallas.component.scss',
 })
-export class PantallasComponent {
+export class PantallasComponent implements OnInit {
+  public screens: Screen[] = [];
 
+  constructor(private screenService: ScreenService) {}
+
+  ngOnInit(): void {
+    this.screens = this.screenService.obtenerTodos();
+  }
 }
