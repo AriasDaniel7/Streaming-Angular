@@ -16,6 +16,7 @@
   &:hover {
     transform: translateY(-7px);
     transition-duration: 0.4s;
+    z-index: 1;
   }
 }
 
@@ -70,4 +71,6 @@ button[mat-fab] {
   transform: rotate(-45deg);
   right: -10px;
   top: 55%;
+  z-index: 2;
+  will-change: transform;
 }
